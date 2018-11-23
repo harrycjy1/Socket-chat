@@ -86,7 +86,7 @@ io.sockets.on('connection', function(socket){
   //사용자 연결 끊기 설정
   socket.on('disconnect',function(data){
     if(socket.username){
-      userList.splice(userLust.indexOf(socket.username),1);
+      userList.splice(userList.indexOf(socket.username),1);
     }
     connections.splice(connections.indexOf(socket),1);
     console.log("Disconnected : ",connections.length);
