@@ -18,7 +18,7 @@ app.locals.ENV_DEVELOPMENT = env == 'development';
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine', 'ejs');
 
-// 파비콘을 사용하라면 아래 주석을 풀것
+// 파비콘을 사용하려면 아래 주석을 풀것
 // app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -50,7 +50,7 @@ if (app.get('env') === 'development') {
     });
 }
 
-// 실무에선 스택 ㄴ
+
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
